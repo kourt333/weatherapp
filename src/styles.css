@@ -1,0 +1,28 @@
+body {
+  background-image: url("https://gray-wmctv-prod.cdn.arcpublishing.com/resizer/qA1anS5-NBWEo-bG8qalmpj21gI=/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/IRVBITVP3VE7JHT7MFOMPRA5TU.png");
+  font-family: "Roboto", sans-serif;
+  background-size: 100%;
+  color: black;
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  max-width: 600px;
+  padding: 30px;
+  margin: 30px auto;
+}
+
+.currentTemp {
+  margin: 20px;
+  padding: 15px;
+  font-size: 25px;
+}
+
+.current-temp {
+  margin: 20px;
+}
+
+.search-form {
+  margin-bottom: 20px;
+}
