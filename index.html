@@ -10,6 +10,9 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/styles.css" />
 
     <title>Weather App</title>
@@ -25,14 +28,19 @@
   <body>
     <div class="container">
     
-      <h2 id="city">Pittsburgh</h2>
+      <h2 id="city"></h2>
 
 <div class="float-left">
-<span id="temperature">64</span>
+<span id="temperature"></span>
 <span class="units"><a href="#" id="celsius-link">°C</a> | <a href="#" id="fahrenheit-link">°F</a></span>
 </div>
-      <div id="date"></div>
+      
       <h3>🌤</h3>
+
+      <div id="date"></div>
+
+    <div class= "col-6" id="description"></div>
+
 
 
         <form class="search-bar" id="search-form">
@@ -42,6 +50,8 @@
             </div>
             <button type="button" class="btn btn-info">Search</button>
           </div>
+
+
 
           <div class="col-3">
             <button
@@ -65,9 +75,7 @@
         </div>
       </div>
     
-      <div class= "col-6" id="description">
-        Partly Cloudy
-      </div>
+    
    
 
       <div class="weeklyTemp">
@@ -113,9 +121,10 @@
             02/10
           </div>
         </div>
-        
-        <a href="https://github.com/kourt333?tab=repositories" target="_blank">
-          Open-source code</a> , by Kourtnie Gilfoyle
+        <small>
+         <a href="https://github.com/kourt333?tab=repositories" target="_blank">
+          Open-source code</a> , by Kourtnie Gilfoyle 
+        </small>
       </div>
    <script src="src/index.js"></script>
 </body>
