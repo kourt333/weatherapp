@@ -1,4 +1,5 @@
-function formatDate(date) {
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -8,25 +9,6 @@ function formatDate(date) {
     minutes = `0${minutes}`;
   }
 
-  let dayIndex = date.getDay();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[dayIndex];
-
-  return `${day} ${hours}:${minutes}`;
-}
-
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
-  let hours = date.gethours();
-  let minutes = date.getMinutes();
   let days = [
     "Sunday",
     "Monday",
@@ -63,7 +45,7 @@ function displayTemperature(response) {
 }
 
 function searchCity(city) {
-  let apiKey = "53f3bc1f5d348c44be3e3754c7185573";
+  let apiKey = "d2f2a27cc8b229cd0295ed250ba4be5e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
@@ -75,7 +57,7 @@ function handleSubmit(event) {
 }
 
 function searchLocation(position) {
-  let apiKey = "53f3bc1f5d348c44be3e3754c7185573";
+  let apiKey = "d2f2a27cc8b229cd0295ed250ba4be5e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayWeatherCondition);
