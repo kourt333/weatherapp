@@ -51,6 +51,19 @@ function displayTemperature(response) {
     response.data.weather[0].main;
 }
 
-let apiKey = "d2f2a27cc8b229cd0295ed250ba4be5e";
-let city = "Pittsburgh";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "d2f2a27cc8b229cd0295ed250ba4be5e";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Pittsburgh");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
