@@ -22,15 +22,31 @@
     integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-
 <body>
   <div class="container">
-
+  <div class="weather-app-wrapper">
+  <div class="weather-app">
+  <form id="search-form" class="mb-4">
+        <div class="row">
+          <div class="col-9">
+          <input 
+          type="search" 
+          placeholder="City Name" 
+          class="form-control" 
+          autocomplete="off" 
+          id="city-input" 
+          />
+        </div>
+        <div class="col-3">
+        <input type="submit" value="search" class="btn btn-primary w-100">
+        </div>
+        </div>
+      </form>
     <h2 id="city"></h2>
 
     <div class="float-left">
       <span id="temperature"></span>
-      <span class="units"><a href="#" id="celsius-link">°C</a> | <a href="#" id="fahrenheit-link">°F</a></span>
+      <span class="units"><a href="#" id="celsius-link" class="active">°C</a> | <a href="#" id="fahrenheit-link">°F</a></span>
     </div>
 
     <img src="" alt="sunny" id="icon" class="float-left" />
@@ -38,17 +54,6 @@
     <div id="date"></div>
 
     <div class="col-6" id="description"></div>
-
-
-
-    <form class="search-bar" id="search-form">
-      <div>
-        <div class="form-group">
-          <input type="search" placeholder="City Name" class="form-control" autocomplete="off" id="city-input" />
-        </div>
-        <input type="submit" value="search" class="btn btn-primary w-100">
-
-    </form>
 
     <div class="climate">
       <div class="row">
@@ -62,58 +67,21 @@
       </div>
     </div>
 
+<div class="weather-forecast" id="forecast">
+ 
 
-
-
-    <div class="weeklyTemp">
-      <div class="row">
-        <div class="col-2">60°F</div>
-        <div class="col-2">64°F</div>
-        <div class="col-2">64°F</div>
-        <div class="col-2">64°F</div>
-        <div class="col-2">64°F</div>
       </div>
     </div>
-
-    <div class="icons">
-      <div class="row">
-        <div class="col-2">🌤</div>
-        <div class="col-2">🌤</div>
-        <div class="col-2">🌤</div>
-        <div class="col-2">🌤</div>
-        <div class="col-2">🌤</div>
-      </div>
-    </div>
-
-    <div class="days">
-      <div class="row">
-        <div class="col-2">
-          Monday<br />
-          02/06
-        </div>
-        <div class="col-2">
-          Tuesday<br />
-          02/07
-        </div>
-        <div class="col-2">
-          Wednesday<br />
-          02/08
-        </div>
-        <div class="col-2">
-          Thursday<br />
-          02/09
-        </div>
-        <div class="col-2">
-          Friday<br />
-          02/10
-        </div>
-      </div>
+  </div>
+</div>
+  <p class="text-center">
       <small>
-        <a href="https://github.com/kourt333?tab=repositories" target="_blank">
+        <a href="https://github.com/kourt333/weatherapp" target="_blank">
           Open-source code</a> , by Kourtnie Gilfoyle
       </small>
-    </div>
-    <script src="src/index.js"></script>
-</body>
-
+    </p>
+   </div>
+  </div>
+  <script src="src/index.js"></script>
+ </body>
 </html>
